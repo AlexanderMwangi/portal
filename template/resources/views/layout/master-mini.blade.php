@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Star Admin Premium Laravel Admin Dashboard Template</title>
+  <title>AMREF Appraisal Portal</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@
   <!-- common css -->
   {!! Html::style('css/app.css') !!}
   <!-- end common css -->
-
+  {!! Html::style('assets/css/custom.css') !!}
   @stack('style')
 </head>
 <body data-base-url="{{url('/')}}">

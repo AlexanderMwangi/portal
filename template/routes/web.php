@@ -135,7 +135,23 @@ Route::get('/clear-cache', function() {
     return "Cache is cleared";
 });
 
-// 404 for undefined routes
-Route::any('/{page?}',function(){
-    return View::make('pages.error-pages.error-404');
-})->where('page','.*');
+// // 404 for undefined routes
+// Route::any('/{page?}',function(){
+//     return View::make('pages.error-pages.error-404');
+// })->where('page','.*');
+
+Route::post('postLogin', ['as' => 'postLogin', 'uses' => 'Controller@login']);
+Route::post('objective/submit', ['as' => 'objective/submit', 'uses' => 'Controller@submitObjective']);
+Route::post('kpi/submit', ['as' => 'kpi/submit', 'uses' => 'Controller@submitKpi']);
+
+Route::get('/objectives', 'Controller@objectives')->name('objectives');
+Route::get('/objectives/add', 'Controller@addObjectives')->name('objectives/add');
+Route::get('/kpis/add', 'Controller@addKPIs')->name('kpi/adds');
+Route::get('/profile', 'Controller@profile')->name('profile');
+
+
+
+
+Route::get('test', ['as' => 'test', 'uses' => 'Controller@session']);
+
+

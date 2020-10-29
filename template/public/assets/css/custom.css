@@ -1,0 +1,35 @@
+#portal-title {
+    background-color: rgba(220,18,18,0.80);
+    max-width: 508px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+    height: auto;
+    margin: 0 auto;
+}
+.navbar .navbar-brand-wrapper .navbar-brand img {
+    height: 58px;
+}
+.navbar {
+	background: rgb(210, 16, 52) !important;
+}
+.form-control {
+    height: 3rem !important;
+}
+textarea.form-control {
+    height: auto !important;
+}
+.btn-custom{
+	background-color: #D21034;
+	color: #ffffff;
+	border-color:none;
+	border-radius: none;
+	border: none;
+}
+
+.btn-custom:hover{
+	background-color: black;
+	color: #ffffff;
+}
+.pull-right{
+    float: right;
+}
