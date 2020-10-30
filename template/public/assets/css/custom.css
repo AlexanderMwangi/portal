@@ -33,3 +33,9 @@ textarea.form-control {
 .pull-right{
     float: right;
 }
+#small-logo{
+    height: auto;
+}
+body{
+    font-size: 0.9rem;
+}

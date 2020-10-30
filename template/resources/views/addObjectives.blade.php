@@ -32,7 +32,7 @@
 
             <div class="form-group">
               <label for="organization_goals">Organizational Goals</label>
-              <select name="organization_goal" class="form-control" required="required">
+              <select name="organization_goal" class="form-control select2" required="required">
                   <option value="1">Human Resources for Health</option>
                   <option value="2">Innovative Health Services and Solutions</option>
                   <option value="3">Investments in Health</option>
@@ -40,7 +40,7 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Department Goals</label>
-              <select name="department_goal" class="form-control" required="required">
+              <select name="department_goal" class="form-control select2" required="required">
                   <option value="1">Department Goal 1</option>
                   <option value="2">Department Goal 2</option>
                   <option value="3">Department Goal 3</option>

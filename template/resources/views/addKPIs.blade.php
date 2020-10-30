@@ -22,9 +22,13 @@
          <form method="POST" action="{{ route('kpi/submit') }}">
           {{ csrf_field() }}
             <div class="form-group">
-              <label for="organization_goals">Objective</label>
-              <select name="organization_goal" class="form-control" required="required">
-                  
+              <label for="objective">Objective</label>
+              <select name="objective" class="form-control select2" required="required">
+              @if(isset($objectives))
+                @foreach($objectives as $obj)
+                  <option value="{{$obj->objective_id}}">{{$obj->objective}}</option>
+                @endforeach
+              @endif
               </select>
             </div>
              <div class="form-group">
@@ -40,4 +44,5 @@
   </div>
 </div>
 @endsection
+
 

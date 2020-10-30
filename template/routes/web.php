@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
 
 // Route::get('/','DashboardController@index');
 
@@ -142,11 +142,27 @@ Route::get('/clear-cache', function() {
 
 Route::post('postLogin', ['as' => 'postLogin', 'uses' => 'Controller@login']);
 Route::post('objective/submit', ['as' => 'objective/submit', 'uses' => 'Controller@submitObjective']);
-Route::post('kpi/submit', ['as' => 'kpi/submit', 'uses' => 'Controller@submitKpi']);
+Route::post('kpi/submit', ['as' => 'kpi/submit', 'uses' => 'Controller@submitKPI']);
+
+Route::post('postMid', ['as' => 'postMid', 'uses' => 'Controller@submitMidReview']);
+Route::post('postEnd', ['as' => 'postEnd', 'uses' => 'Controller@submitEndReview']);
+
+Route::get('/','Controller@index');
+Route::get('/login', function () { return view('pages.user-pages.login'); });
+Route::get('/logout', 'Controller@logout')->name('logout');
 
 Route::get('/objectives', 'Controller@objectives')->name('objectives');
 Route::get('/objectives/add', 'Controller@addObjectives')->name('objectives/add');
+
+Route::get('/kpis', 'Controller@kpis')->name('kpis');
 Route::get('/kpis/add', 'Controller@addKPIs')->name('kpi/adds');
+
+Route::get('/review/mid/add', 'Controller@addMidReview')->name('review/mid/add');
+Route::get('/review/end/add', 'Controller@addEndReview')->name('review/end/add');
+
+Route::get('/review/mid', 'Controller@midReview')->name('review/mid');
+Route::get('/review/end', 'Controller@endReview')->name('review/end');
+
 Route::get('/profile', 'Controller@profile')->name('profile');
 
 

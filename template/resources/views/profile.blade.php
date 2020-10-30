@@ -33,7 +33,7 @@
         <div class="float-left">
             <p class="mb-0 text-right">Objectives</p>
             <div class="fluid-container">
-              <h3 class="font-weight-medium mb-0">5</h3>
+              <h3 class="font-weight-medium mb-0">{{$objectivesCount}}</h3>
             </div>
         </div>
         <p class="text-muted mt-3 mb-0 text-left text-md-center text-xl-left">
@@ -58,6 +58,31 @@
       </div>
     </div>
   </div>
+   <div class="card col-md-12">
+      <div class="p-4 border-bottom bg-light">
+        <h4 class="card-title mb-0">Your KPIs Summary 
+        </h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-responsive">
+            <thead>
+              <th>#</th>
+              <th>KPI Summary</th>
+            </thead>
+            @php($counter = 1)
+             @foreach($kpis as $kpi)
+              <tr>
+                <td>{{$counter}}</td>
+                <td>{{$kpi->kpi}}</td>
+              </tr>
+            @php($counter = $counter+1)
+             @endforeach
+          </table>
+        </div>
+        <div class="mr-5" id="mixed-chart-legend"></div>
+      </div>
+    </div>
 </div>
 @endsection
 

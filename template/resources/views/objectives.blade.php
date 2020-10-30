@@ -14,21 +14,18 @@
             <a href="{{ url('/objectives/add') }}" class="pull-right">Add New Objective</a>
           @endif 
         </h4>
-        
       </div>
       <div class="card-body">
         <div class="table-responsive">
-             @foreach($objectives as $obj)
-               <b>{{$obj->objective_id}}. {{$obj->objective}}</b>
-               <p>Year:  {{$obj->year}}</p>
-                <p>Organnization Goal: {{$obj->organization_goal}}</p>
-                <p>Department Goal: {{$obj->department_goal}}</p>
-                <p>Date Submitted: {{$obj->date_added}}</p>
-                
-                <br>
-             @endforeach
-            </tbody>
-          </table>
+           @foreach($objectives as $obj)
+             <b>{{$obj->objective_id}}. {{$obj->objective}}</b>
+             <p>Year:  {{$obj->year}}</p>
+              <p>Organnization Goal: {{$obj->organization_goal}}</p>
+              <p>Department Goal: {{$obj->department_goal}}</p>
+              <p>Date Submitted: {{$obj->date_added}}</p>
+              
+              <br>
+           @endforeach
         </div>
         <div class="mr-5" id="mixed-chart-legend"></div>
       </div>

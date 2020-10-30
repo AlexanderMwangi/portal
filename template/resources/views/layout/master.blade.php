@@ -22,6 +22,7 @@
   {!! Html::style('css/app.css') !!}
   <!-- end common css -->
   {!! Html::style('assets/css/custom.css') !!}
+  {!! Html::style('https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css') !!}
   @stack('style')
 </head>
 <body data-base-url="{{url('/')}}">
@@ -57,6 +58,14 @@
   <!-- end common js -->
 
   @stack('custom-scripts')
+  {!! Html::script('https://code.jquery.com/jquery-3.5.1.min.js') !!}
+  {!! Html::script('https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js') !!}
+  
   @yield('js')
+   <script type="text/javascript">
+    $(document).ready(function() {
+      $('.select2').select2();
+    });
+  </script>
 </body>
 </html>
